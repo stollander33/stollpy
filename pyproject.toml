@@ -15,14 +15,15 @@ classifiers = [
 description = "One line description of your module"
 dependencies = [
     "rocketry",
-    "fastapi",    
+    "fastapi",
     "uvicorn",
     "websockets",
     "watchfiles",
     "uvloop",
     "python-dotenv",
     "h11",
-    "click"    
+    "click",
+    "ipykernel",
 ] # Add project dependencies here, e.g. ["click", "numpy"]
 dynamic = ["version"]
 license.file = "LICENSE"

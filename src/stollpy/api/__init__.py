@@ -1,1 +1,1 @@
-from stollpy.api.v1 import *
+from stollpy.api.v1.tasks import app
