@@ -13,7 +13,17 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
 ]
 description = "One line description of your module"
-dependencies = [] # Add project dependencies here, e.g. ["click", "numpy"]
+dependencies = [
+    "rocketry",
+    "fastapi",    
+    "uvicorn",
+    "websockets",
+    "watchfiles",
+    "uvloop",
+    "python-dotenv",
+    "h11",
+    "click"    
+] # Add project dependencies here, e.g. ["click", "numpy"]
 dynamic = ["version"]
 license.file = "LICENSE"
 readme = "README.rst"
@@ -108,3 +118,12 @@ commands =
     pre-commit: pre-commit run --all-files {posargs}
     docs: sphinx-{posargs:build -EW --keep-going} -T docs build/html
 """
+
+[tool.poetry]
+homepage = "https://python-poetry.org/stollpy"
+name = "stollpy"
+description = "Another way to packaging python"
+version = "1.0.0"
+authors = []
+readme = ["docs/README1.md", "docs/README2.md"]
+repository = "https://github.com/stollander33/stoll-py.git"
