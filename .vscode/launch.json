@@ -10,7 +10,8 @@
             "request": "launch",
             "module": "stollpy",
             "args": [
-                "--versionm",
+                "api",
+                "start"
             ],
             "justMyCode": true
         },

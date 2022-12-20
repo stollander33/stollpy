@@ -1,8 +1,6 @@
 import asyncio
 import logging
 import sys
-import tracemalloc
-from argparse import ArgumentParser
 
 import click
 
@@ -34,22 +32,8 @@ def main(args=None):
     else:
         return asyncio.run(app(prog_name="scheduler"))
 
-    
-
-
 if __name__ == "__main__":
     logger = logging.getLogger("stollander")
     logger.addHandler(logging.StreamHandler())
 
     sys.exit(main(sys.argv))
-
-# def main(args=None):
-#    parser = ArgumentParser()
-#    parser.add_argument("--version", action="version", version=__version__)
-#    args = parser.parse_args(args)
-
-
-# test with: python -m stollpy
-# if __name__ == "__main__":
-#    main()
-
