@@ -1,10 +1,8 @@
-stollpy
-===========================
+# stollpy
 
 (venv) $ bumpver update --minor
-INFO    - Old Version: 1.0.0
-INFO    - New Version: 1.1.0
-
+INFO - Old Version: 1.0.0
+INFO - New Version: 1.1.0
 
 check-manifest
 buildstatus appveyor coverage
@@ -22,8 +20,6 @@ $ check-manifest -u -v
 listing source files under version control: 6 files and directories
 building an sdist: check-manifest-0.7.tar.gz: 4 files and dire
 
-
-
 |code_ci| |docs_ci| |coverage| |pypi_version| |anaconda_version| |license|
 
 .. note::
@@ -36,11 +32,11 @@ This is where you should write a short paragraph that describes what your module
 how it does it, and why people should use it.
 
 ============== ==============================================================
-PyPI           ``pip install stollpy``
-Conda          ``conda install -c stollander33 stollpy``
-Source code    https://github.com/stollander33/stollpy
-Documentation  https://stollander33.github.io/stollpy
-Releases       https://github.com/stollander33/stollpy/releases
+PyPI `pip install stollpy`
+Conda `conda install -c stollander33 stollpy`
+Source code https://github.com/stollander33/stollpy
+Documentation https://stollander33.github.io/stollpy
+Releases https://github.com/stollander33/stollpy/releases
 ============== ==============================================================
 
 This is where you should put some images or code snippets that illustrate
@@ -55,34 +51,38 @@ introductory code here:
 
 Or if it is a commandline tool then you might put some example commands here::
 
-    $ 
+    $
 
 .. |code_ci| image:: https://github.com/stollander33/stollpy/actions/workflows/code.yml/badge.svg?branch=main
-    :target: https://github.com/stollander33/stollpy/actions/workflows/code.yml
-    :alt: Code CI
+:target: https://github.com/stollander33/stollpy/actions/workflows/code.yml
+:alt: Code CI
 
 .. |docs_ci| image:: https://github.com/stollander33/stollpy/actions/workflows/docs.yml/badge.svg?branch=main
-    :target: https://github.com/stollander33/stollpy/actions/workflows/docs.yml
-    :alt: Docs CI
+:target: https://github.com/stollander33/stollpy/actions/workflows/docs.yml
+:alt: Docs CI
 
 .. |coverage| image:: https://codecov.io/gh/stollander33/stollpy/branch/main/graph/badge.svg
-    :target: https://codecov.io/gh/stollander33/stollpy
-    :alt: Test Coverage
+:target: https://codecov.io/gh/stollander33/stollpy
+:alt: Test Coverage
 
 .. |pypi_version| image:: https://img.shields.io/pypi/v/stollpy.svg
-    :target: https://pypi.org/project/stollpy
-    :alt: Latest PyPI version
+:target: https://pypi.org/project/stollpy
+:alt: Latest PyPI version
 
 .. |anaconda_version| image:: https://anaconda.org/stollander33/stollpy/badges/version.svg
-    :target: https://anaconda.org/stollander33/stollpy
-    :alt: Latest Anaconda version
+:target: https://anaconda.org/stollander33/stollpy
+:alt: Latest Anaconda version
 
 .. |license| image:: https://img.shields.io/badge/License-Apache%202.0-blue.svg
-    :target: https://opensource.org/licenses/Apache-2.0
-    :alt: Apache License
+:target: https://opensource.org/licenses/Apache-2.0
+:alt: Apache License
 
 ..
-    Anything below this line is used when viewing README.md and will be replaced
-    when included in index.rst
+Anything below this line is used when viewing README.md and will be replaced
+when included in index.rst
 
 See https://stollander33.github.io/stollpy for more detailed documentation.
+
+This is where you should write a short paragraph
+
+This project contains template code only

@@ -15,7 +15,7 @@ def web(ctx):
 @click.pass_context
 def compile(ctx, download: bool, key: str):
     click.echo('compile %s the %s database' % (download, key))
-    
+
 
 @click.command("start")
 @click.option('--debug', default=True,   help='Arancar con depurador')

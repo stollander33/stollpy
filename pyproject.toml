@@ -39,7 +39,6 @@ dev = [
     "bumpver",
     "black",
     "mypy",
-    "pytest-cov",
     "flake8-isort",
     "Flake8-pyproject",
     "pipdeptree",
@@ -132,7 +131,7 @@ homepage = "https://python-poetry.org/stollpy"
 name = "stollpy"
 description = "Another way to packaging python"
 summary = "dfgdfgsdfgsdf gsdfg sdfg sdfgsdf gsdfg s sdfg sd una linea"
-version = "1.0.0"
+version = "0.1.2"
 authors = []
 readme = ["docs/README1.md", "docs/README2.md"]
 repository = "https://github.com/stollander33/stollpy.git"

@@ -26,9 +26,9 @@ def assert_not_contains_text(path: str, text: str, explanation: str):
 
 # pyproject.toml
 def test_module_summary():
-    summary = metadata("python3-pip-skeleton")["summary"]
+    summary = metadata("stollpy")["summary"]
     skeleton_check(
-        "One line description of your module" in summary,
+        "My way" in summary,
         "Please change project.description in ./pyproject.toml "
         "to be a one line description of your module",
     )

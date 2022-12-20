@@ -9,6 +9,7 @@
             "type": "python",
             "request": "launch",
             "module": "stollpy",
+            "python": "/home/stoll/anaconda3/envs/stollpy/bin/python",
             "args": [
                 "api",
                 "start"

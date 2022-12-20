@@ -6,4 +6,6 @@ from stollpy import __version__
 
 def test_cli_version():
     cmd = [sys.executable, "-m", "stollpy", "--version"]
+    a = subprocess.check_output(cmd).decode().strip()
+    print(a)
     assert subprocess.check_output(cmd).decode().strip() == __version__
