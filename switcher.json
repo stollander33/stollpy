@@ -2,5 +2,9 @@
   {
     "version": "main",
     "url": "https://stollander33.github.io/stollpy/main/"
+  },
+  {
+    "version": "dev",
+    "url": "https://stollander33.github.io/stollpy/dev/"
   }
 ]
