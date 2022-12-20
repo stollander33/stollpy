@@ -1,9 +1,0 @@
-rocketry==2.5.1
-fastapi==0.88.0
-uvicorn==0.20.0
-websockets==10.4
-watchfiles==0.18.1
-uvloop==0.17.0
-python-dotenv==0.21.0
-h11==0.14.0
-click==8.1.3

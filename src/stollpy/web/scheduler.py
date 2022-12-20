@@ -3,10 +3,11 @@ This file contains Rocketry app.
 Add your tasks here, conditions etc. here.
 """
 import asyncio
+
 from rocketry import Rocketry
 from rocketry.conds import every
 
-app = Rocketry(config={"task_execution": "async"})
+app = Rocketry(config={"execution": "async"})
 
 @app.task(every('10 seconds', based="finish"))
 async def do_permanently():

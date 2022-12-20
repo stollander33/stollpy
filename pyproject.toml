@@ -12,7 +12,7 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
 ]
-description = "One line description of your module"
+description = "My way to packaging Python apps"
 dependencies = [
     "rocketry",
     "fastapi",
@@ -24,16 +24,18 @@ dependencies = [
     "h11",
     "click",
     "ipykernel",
+    "requests",
 ] # Add project dependencies here, e.g. ["click", "numpy"]
 dynamic = ["version"]
-license.file = "LICENSE"
-readme = "README.rst"
+license = { file = "LICENSE", required = 'file' }
+readme = "README.md"
 requires-python = ">=3.8"
 
 [project.optional-dependencies]
 dev = [
     "black",
     "mypy",
+    "pytest-cov",
     "flake8-isort",
     "Flake8-pyproject",
     "pipdeptree",
@@ -45,6 +47,8 @@ dev = [
     "sphinx-design",
     "tox-direct",
     "types-mock",
+    'validate-pyproject[all]',
+    "pytest",
 ]
 
 [project.scripts]
@@ -54,9 +58,8 @@ stollpy = "stollpy.__main__:main"
 GitHub = "https://github.com/stollander33/stollpy"
 
 [[project.authors]] # Further authors may be added by duplicating this section
-email = "richardssen33@gmail.com"
+email = "stollander@proton.me"
 name = "Richardssen"
-
 
 [tool.setuptools_scm]
 write_to = "src/stollpy/_version.py"
@@ -124,7 +127,8 @@ commands =
 homepage = "https://python-poetry.org/stollpy"
 name = "stollpy"
 description = "Another way to packaging python"
+summary = "dfgdfgsdfgsdf gsdfg sdfg sdfgsdf gsdfg s sdfg sd una linea"
 version = "1.0.0"
 authors = []
 readme = ["docs/README1.md", "docs/README2.md"]
-repository = "https://github.com/stollander33/stoll-py.git"
+repository = "https://github.com/stollander33/stollpy.git"

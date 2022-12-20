@@ -1,18 +1,19 @@
 """Console script for stoll_py."""
-import sys, os
-import click
 import asyncio
 import logging
+import os
+import sys
+
+import click
 import uvicorn
 
-import sys
+from stollpy.api import app as app_fastapi
+from stollpy.scheduler import app as app_rocketry
+
 sys.path.append(os.path.join(os.path.dirname(os.path.dirname(__file__))))
 #sys.path.append('/path/to/dir')
 
-print(sys.path)
 
-from stoll_py.scheduler import app as app_rocketry
-from stoll_py.api import app as app_fastapi
 
 
 
@@ -46,8 +47,6 @@ class Server(uvicorn.Server):
 
 
 async def _main():
-    logger.debug(sys.path)
-    print(sys.path)
     "Run Rocketry and FastAPI"
     server = Server(config=uvicorn.Config(app_fastapi, workers=1, loop="asyncio"))
 

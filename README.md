@@ -32,7 +32,7 @@ introductory code here:
 
 Or if it is a commandline tool then you might put some example commands here::
 
-    $ python -m stollpy --version
+    $ 
 
 .. |code_ci| image:: https://github.com/stollander33/stollpy/actions/workflows/code.yml/badge.svg?branch=main
     :target: https://github.com/stollander33/stollpy/actions/workflows/code.yml
@@ -59,7 +59,7 @@ Or if it is a commandline tool then you might put some example commands here::
     :alt: Apache License
 
 ..
-    Anything below this line is used when viewing README.rst and will be replaced
+    Anything below this line is used when viewing README.md and will be replaced
     when included in index.rst
 
 See https://stollander33.github.io/stollpy for more detailed documentation.

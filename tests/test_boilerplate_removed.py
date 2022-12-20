@@ -9,7 +9,7 @@ ROOT = Path(__file__).parent.parent
 
 
 def skeleton_check(check: bool, text: str):
-    if ROOT.name == "python3-pip-skeleton" or str(ROOT) == "/project":
+    if ROOT.name == "stollpy" or str(ROOT) == "/stollpy":
         # In the skeleton module the check should fail
         check = not check
         text = f"Skeleton didn't raise: {text}"
@@ -37,7 +37,7 @@ def test_module_summary():
 # README
 def test_changed_README_intro():
     assert_not_contains_text(
-        "README.rst",
+        "README.md",
         "This is where you should write a short paragraph",
         "to include an intro on what your module does",
     )
@@ -45,7 +45,7 @@ def test_changed_README_intro():
 
 def test_removed_adopt_skeleton():
     assert_not_contains_text(
-        "README.rst",
+        "README.md",
         "This project contains template code only",
         "remove the note at the start",
     )
@@ -53,7 +53,7 @@ def test_removed_adopt_skeleton():
 
 def test_changed_README_body():
     assert_not_contains_text(
-        "README.rst",
+        "README.md",
         "This is where you should put some images or code snippets",
         "to include some features and why people should use it",
     )

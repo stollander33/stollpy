@@ -1,6 +1,6 @@
 :html_theme.sidebar_secondary.remove:
 
-.. include:: ../README.rst
+.. include:: ../README.md
     :end-before: when included in index.rst
 
 How the documentation is structured

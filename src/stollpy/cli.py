@@ -1,33 +1,48 @@
-"""Console script for stoll_py."""
+"""
+Console script for stollpy
+"""
 import asyncio
 import logging
-import os
-import sys
 
 import click
 import uvicorn
 
+from stollpy import _version
 from stollpy.api import app as tasks
 from stollpy.scheduler import app as app_rocketry
-
-sys.path.append(os.path.join(os.path.dirname(os.path.dirname(__file__))))
-# sys.path.append('/path/to/dir')
 
 logger = logging.getLogger("stollpy")
 logger.addHandler(logging.StreamHandler())
 
 
 @click.command()
-def main(args=None):
-    """Console script for stoll_py."""
-    click.echo("Replace this message by putting your code into " "stoll_py.cli.main")
+def version(count=1, name=None):
+    """
+    Console script for stoll_py.
+    """
+    click.echo(_version)
+    return _version
+
+
+@click.command()
+@click.option('--count', default=1, help='Number of greetings.')
+@click.option('--name', default="Richi", prompt='Your name', help='The person to greet.')
+def main(count=1, name=None):
+    """
+    Console script for stoll_py.
+    """
+    click.echo("%s Replace this message by putting your code into stoll_py.cli.main" % name)
     click.echo("See click documentation at https://click.palletsprojects.com/")
     return asyncio.run(_main())
 
 
 @click.command()
-def api(args=None):
-    """Console script for stoll_py."""
+@click.option("--show_docs", default=True, help="Mostrar/Ocultar la documentación.")
+@click.option("--production", default=False, help="Ejecutar en modo production")
+def api(show_docs, production):
+    """
+    Console script for stoll_py.
+    """
     click.echo("Replace this message by putting your code into " "stoll_py.cli.main")
     click.echo("See click documentation at https://click.palletsprojects.com/")
     return asyncio.run(_api())
@@ -45,8 +60,6 @@ class Server(uvicorn.Server):
 
 
 async def _main():
-    logger.debug(sys.path)
-    print(sys.path)
     "Run Rocketry and FastAPI"
     server = Server(config=uvicorn.Config(tasks, workers=1, loop="asyncio"))
 
@@ -56,7 +69,7 @@ async def _main():
 
     await asyncio.wait([sched, api])
 
-
+ 
 async def _api():
     "Run Rocketry and FastAPI"
     server = Server(config=uvicorn.Config(tasks, workers=1, loop="asyncio"))
@@ -68,9 +81,8 @@ async def _api():
 
 if __name__ == "__main__":
     # Print Rocketry's logs to terminal
-    logger = logging.getLogger("rocketry.task")
+    logger = logging.getLogger("stollpy")
     logger.addHandler(logging.StreamHandler())
 
-    logger.debug(sys.path)
     # Run both applications
-    sys.exit(main())
+    asyncio.run(_main())
