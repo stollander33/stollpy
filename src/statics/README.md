@@ -6,22 +6,6 @@ INFO    - Old Version: 1.0.0
 INFO    - New Version: 1.1.0
 
 
-check-manifest
-buildstatus appveyor coverage
-
-Are you a Python developer? Have you uploaded packages to the Python Package Index? Have you accidentally uploaded broken packages with some files missing? If so, check-manifest is for you.
-
-Quick start
-$ pip install check-manifest
-
-$ cd ~/src/mygreatpackage
-$ check-manifest
-You can ask the script to help you update your MANIFEST.in:
-
-$ check-manifest -u -v
-listing source files under version control: 6 files and directories
-building an sdist: check-manifest-0.7.tar.gz: 4 files and dire
-
 
 
 |code_ci| |docs_ci| |coverage| |pypi_version| |anaconda_version| |license|

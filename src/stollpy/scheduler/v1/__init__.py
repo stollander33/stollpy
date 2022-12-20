@@ -1,1 +1,1 @@
-from .rocketry import *
+from .rocketry import app

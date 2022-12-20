@@ -1,17 +1,55 @@
+import asyncio
 import logging
-import os
 import sys
+import tracemalloc
+from argparse import ArgumentParser
 
-from .cli import main
+import click
 
-__all__ = ["main"]
+from ._version import __version__
+from .api import api
+from .scheduler import scheduler
+from .web import web
 
-sys.path.append(os.path.join(os.path.dirname(os.path.dirname(__file__))))
+__all__ = ["api", "scheduler", "web"]
+
+
+@click.group("app")
+@click.pass_context
+def app(ctx):
+    pass
+
+
+app.add_command(api)
+app.add_command(scheduler)
+app.add_command(web)
+
+
+def main(args=None):
+    # parser = ArgumentParser()
+    # parser.add_argument("--version", action="version", version=__version__)
+    # args = parser.parse_args(args)
+    if len(args) == 2 and args[1] == '--version':
+        return print(__version__)
+    else:
+        return asyncio.run(app(prog_name="scheduler"))
+
+    
+
 
 if __name__ == "__main__":
-    # Print Rocketry's logs to terminal
     logger = logging.getLogger("stollander")
     logger.addHandler(logging.StreamHandler())
-    
-    sys.exit(main())
+
+    sys.exit(main(sys.argv))
+
+# def main(args=None):
+#    parser = ArgumentParser()
+#    parser.add_argument("--version", action="version", version=__version__)
+#    args = parser.parse_args(args)
+
+
+# test with: python -m stollpy
+# if __name__ == "__main__":
+#    main()
 

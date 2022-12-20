@@ -35,7 +35,6 @@ def api(args=None):
     return asyncio.run(_main())
 
 
-
 class Server(uvicorn.Server):
     """Customized uvicorn.Server
     

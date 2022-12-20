@@ -1,0 +1,24 @@
+# MANIFEST.in
+exclude .devcontainer/*.*
+exclude .devcontainer/Dockerfile
+exclude .vscode/*.*
+exclude .github/*.*
+recursive-include src/*.*
+recursive-exclude tests/*.*
+
+include LICENSE
+include MANIFEST.im
+include README.mnd
+include setup.py
+graft tests
+global-exclude *.py[cod]
+
+# added by check-manifest
+include *.ipynb
+include *.txt
+include *.yaml
+recursive-include docs *.ico
+recursive-include docs *.py
+recursive-include docs *.rst
+recursive-include docs *.svg
+recursive-include src *.py

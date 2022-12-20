@@ -9,20 +9,24 @@ from rocketry.conds import every
 
 app = Rocketry(config={"execution": "async"})
 
+
 @app.task(every('10 seconds', based="finish"))
 async def do_permanently():
     "This runs for really long time"
     await asyncio.sleep(600000)
+
 
 @app.task(every('2 seconds', based="finish"))
 async def do_short():
     "This runs for short time"
     await asyncio.sleep(1)
 
+
 @app.task(every('20 seconds', based="finish"))
 async def do_long():
     "This runs for long time"
     await asyncio.sleep(60)
+
 
 @app.task(every('10 seconds', based="finish"))
 async def do_fail():

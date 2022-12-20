@@ -9,6 +9,9 @@
             "type": "python",
             "request": "launch",
             "module": "stollpy",
+            "args": [
+                "--versionm",
+            ],
             "justMyCode": true
         },
         {
