@@ -27,3 +27,6 @@ recursive-include src *.py
 
 # added by check-manifest
 include *.py
+
+# added by check-manifest
+include Pipfile

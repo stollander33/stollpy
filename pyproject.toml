@@ -130,13 +130,13 @@ commands =
 homepage = "https://python-poetry.org/stollpy"
 name = "stollpy"
 description = "Another way to packaging python"
-summary = "dfgdfgsdfgsdf gsdfg sdfg sdfgsdf gsdfg s sdfg sd una linea"
-version = "0.1.2"
+# summary = "dfgdfgsdfgsdf gsdfg sdfg sdfgsdf gsdfg s sdfg sd una linea"
+version = "1.0.1"
 authors = []
-readme = ["docs/README1.md", "docs/README2.md"]
+readme = "README.md"
 repository = "https://github.com/stollander33/stollpy.git"
 [tool.bumpver]
-current_version = "1.0.0"
+current_version = "1.0.1"
 version_pattern = "MAJOR.MINOR.PATCH"
 commit_message = "Bump version {old_version} -> {new_version}"
 commit = true

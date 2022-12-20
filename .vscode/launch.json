@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "stollpy: módulo",
+            "name": "API stollpy",
             "type": "python",
             "request": "launch",
             "module": "stollpy",
@@ -16,6 +16,29 @@
             ],
             "justMyCode": true
         },
+        {
+            "name": "WEB",
+            "type": "python",
+            "request": "launch",
+            "module": "stollpy",
+            "python": "/home/stoll/anaconda3/envs/stollpy/bin/python",
+            "args": [
+                "web",
+                "start"
+            ],
+            "justMyCode": true
+        },         
+        {
+            "name": "ROCKIT",
+            "type": "python",
+            "request": "launch",
+            "module": "stollpy",
+            "python": "/home/stoll/anaconda3/envs/stollpy/bin/python",
+            "args": [
+                "scheduler","do_short"
+            ],
+            "justMyCode": true
+        },        
         {
             "name": "Debug Unit Test",
             "type": "python",

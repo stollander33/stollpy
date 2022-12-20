@@ -68,3 +68,8 @@ venv*
 # further build artifacts
 lockfiles/
 
+.pypirc
+.gitignore
+.env
+.pypirc
+.pypirc

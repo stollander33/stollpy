@@ -1,0 +1,9 @@
+[distutils]
+index-servers = 
+    stollpy
+
+[stollpy]
+repository = https://github.com/stollander33/stollpy
+username = __token__
+password = pypi-AgEIcHlwaS5vcmcCJDliOWY2NjYwLTY5YzgtNDUzNC1iNDM5LTdjM2I4ODBhY2E5NwACKlszLCJiMzM2ODNhNS1lZjc0LTRiZjctOTcwNC04MTcwZjg5NGMxZDkiXQAABiBPr38suwSnvfUje6TSVD1U9xdaPjvX2n3r4W-Qm7OQ3w
+branch = main
